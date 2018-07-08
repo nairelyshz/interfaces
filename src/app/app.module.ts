@@ -1,3 +1,4 @@
+import { Routes, RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
@@ -10,7 +11,15 @@ import { RouterRoutingModule } from './router/router-routing.module';
 import { ContactoComponent } from './contacto/contacto.component';
 import { MenuJuegosComponent } from './menu-juegos/menu-juegos.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormulariosComponent } from './formularios/formularios.component';
 
+const routes: Routes = [
+            {path: 'login', component: LoginFormComponent},
+            {path: 'type_user', component: TypeUserComponent},
+            {path: '', component: MenuJuegosComponent},
+            {path: 'contacto', component: ContactoComponent},
+            
+            ];
 
 @NgModule({
   declarations: [
@@ -19,13 +28,15 @@ import { FooterComponent } from './footer/footer.component';
     TypeUserComponent,
     ContactoComponent,
     MenuJuegosComponent,
-    FooterComponent
+    FooterComponent,
+    FormulariosComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    FormsModule, 
     ReactiveFormsModule,
-    RouterRoutingModule,
+   // RouterRoutingModule,
+   //RouterModule.forRoot(routes)
     
   ],
   providers: [],
