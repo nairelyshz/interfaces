@@ -7,19 +7,20 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { TypeUserComponent } from './type-user/type-user.component';
-import { RouterRoutingModule } from './router/router-routing.module';
+//import { RouterRoutingModule } from './router/router-routing.module';
 import { ContactoComponent } from './contacto/contacto.component';
 import { MenuJuegosComponent } from './menu-juegos/menu-juegos.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormulariosComponent } from './formularios/formularios.component';
 
 const routes: Routes = [
-            {path: 'login', component: LoginFormComponent},
+            {path: '', component: AppComponent},
             {path: 'type_user', component: TypeUserComponent},
-            {path: '', component: MenuJuegosComponent},
+            {path: 'juegos', component: MenuJuegosComponent},
             {path: 'contacto', component: ContactoComponent},
             
             ];
+
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ const routes: Routes = [
     FormsModule, 
     ReactiveFormsModule,
    // RouterRoutingModule,
+   //RouterModule
    //RouterModule.forRoot(routes)
     
   ],
