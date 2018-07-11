@@ -1,7 +1,7 @@
 
   
 	<div class="container-login100" style="background-image: url('assets/images/bg-01.jpg');">
-       <form action="">
+       <form [formGroup] = "registerForm" (ngSubmit)="submit()" >
        		        <h1>Usuario: {{userStr}}</h1>
         
       <fieldset>
@@ -9,19 +9,19 @@
 			<legend><span class="number">1</span>Datos básicos</legend>
 
 			<label for="name">Nombre:</label>
-			<input type="text" id="name" name="user_name">
+			<input formControlName="name" type="text" id="name" name="user_name">
 
 			<label for="mail">Apellido:</label>
-			<input type="email" id="mail" name="user_email">
+			<input formControlName="last_name" type="email" id="mail" name="user_email">
 
 			<label for="nameUser">Nombre de usuario:</label>
-			<input type="text" id="nameUser" name="user_nameUser">
+			<input formControlName="username" type="text" id="nameUser" name="user_nameUser">
 
 			<label for="password">CI:</label>
-			<input type="password" id="password" name="user_password">
+			<input formControlName="ci" type="password" id="password" name="user_password">
 
 			<label for="edad">Edad:</label>
-			<input type="text" id="edad" name="user_edad">
+			<input tformControlName="edad" ype="text" id="edad" name="user_edad">
 
 			<label>Género:</label>
 
@@ -37,24 +37,24 @@
 	         <fieldset *ngIf="user==2">
         	
 			<label>Cantidad de hijos:</label>
-			<input type="number" id="hijos" name="user_hijos">
+			<input formControlName="cant_hijos" type="number" id="hijos" name="user_hijos">
 
 			<label for="name">Datos hijos:</label>
 
 			<label for="name">Nombre:</label>
-			<input type="text" id="name" name="user_name">
+			<input formControlName="kid_name" type="text" id="name" name="user_name">
 
 			<label for="lastname">Apellido:</label>
-			<input type="text" id="lastname" name="user_lastname">
+			<input formControlName="kid_last_name" type="text" id="lastname" name="user_lastname">
 
-			<label for="user_usuario">Nombre de usuario:</label>
-			<input type="text" id="usuario" name="user_usuario">
+<!--			<label for="user_usuario">Nombre de usuario:</label>
+			<input type="text" id="usuario" name="user_usuario">-->
 
 			<label for="name">Cédula de Identidad o Nro de Pasaporte: (opcional)</label>
-			<input type="text" id="ci" name="user_ci">
+			<input formControlName="kid_ci" type="text" id="ci" name="user_ci">
 
 			<label>Edad:</label>
-			<input type="text" id="edad" name="user_edad">
+			<input formControlName="kid_edad" type="text" id="edad" name="user_edad">
 
 			<label>Género:</label>
 

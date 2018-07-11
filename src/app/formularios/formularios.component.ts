@@ -46,16 +46,15 @@ export class FormulariosComponent implements OnInit {
   	this.registerForm = this.fb.group({
   		name:  ['', Validators.compose([Validators.required]) ],
   		last_name:   ['', Validators.compose([Validators.required]) ],
+  		username:  ['', Validators.compose([Validators.required, Validators.email]) ],
   		ci:   ['', Validators.compose([Validators.required]) ],
   		edad:   ['', Validators.compose([Validators.required]) ],
   		genero: ['', Validators.compose([Validators.required]) ],
   		kid_name: ['' ],
   		kid_last_name: ['' ],
-  		kid_ci: ['' ],
-  		kid_edad:   ['' ],
-  		kid_genero: ['' ],
-
-
+  		kid_ci: [''],
+  		kid_edad:   [''],
+  		kid_genero: [''],
 
   	});
   }
