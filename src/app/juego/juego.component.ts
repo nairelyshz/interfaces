@@ -6,10 +6,10 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formularios',
-  templateUrl: './formularios.component.html',
-  styleUrls: ['./formularios.component.css']
+  templateUrl: './juego.component.html',
+  styleUrls: ['./juego.component.css']
 })
-export class FormulariosComponent implements OnInit {
+export class JuegoComponent implements OnInit {
 /**
  * Usuarios
  * user = 1 profesor
