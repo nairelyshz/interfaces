@@ -25,24 +25,39 @@ export class FormulariosComponent implements OnInit {
   		});
   	if (this.user==1) {
   		this.userStr = "PROFESOR";
+  		this.createForm();
   	}else if(this.user==2){
   		this.userStr = "REPRESENTANTE";
+  		this.createForm();
   	}else if(this.user==3){
   		this.userStr = "MÉDICO";
+  		this.createForm();
   	}else if(this.user==4){
   		this.userStr = "INVESTIGADOR";
+  		this.createForm();
   	}
+  	
+  }
+
+  ngOnInit() {
+  }
+
+  createForm(){
   	this.registerForm = this.fb.group({
   		name:  ['', Validators.compose([Validators.required]) ],
   		last_name:   ['', Validators.compose([Validators.required]) ],
   		ci:   ['', Validators.compose([Validators.required]) ],
   		edad:   ['', Validators.compose([Validators.required]) ],
   		genero: ['', Validators.compose([Validators.required]) ],
+  		kid_name: ['' ],
+  		kid_last_name: ['' ],
+  		kid_ci: ['' ],
+  		kid_edad:   ['' ],
+  		kid_genero: ['' ],
+
+
 
   	});
-  }
-
-  ngOnInit() {
   }
 
 }

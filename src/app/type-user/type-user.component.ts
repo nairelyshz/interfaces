@@ -28,7 +28,7 @@ export class TypeUserComponent implements OnInit {
 
   selectUser(typeUser){
   	console.log(typeUser);
-  	this.router.navigate(['registrarse']);
+  	this.router.navigate(['registrarse'],{queryParams:{typeUser:typeUser}});
   } 
 
 }
