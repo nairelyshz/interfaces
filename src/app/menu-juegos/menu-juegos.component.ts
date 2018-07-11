@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-menu-juegos',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuJuegosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: ActivatedRoute) {
+  		console.log("MEnu");
+  		this.router.queryParams.subscribe(params =>{
+  			console.log(params['username']);
+  			console.log(params['password']);
+  		});
+  }
 
   ngOnInit() {
   }

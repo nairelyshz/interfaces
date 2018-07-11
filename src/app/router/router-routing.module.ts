@@ -6,7 +6,7 @@ import { MenuJuegosComponent } from '../menu-juegos/menu-juegos.component';
 import { ContactoComponent } from '../contacto/contacto.component';
 /*
  * Aqui van las rutas
- */
+ */ 
 const routes: Routes = [
 						{path: 'login', component: LoginFormComponent},
 						{path: 'type_user', component: TypeUserComponent},
@@ -16,7 +16,7 @@ const routes: Routes = [
 						];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  
   exports: [RouterModule]
 })
 export class RouterRoutingModule { }
