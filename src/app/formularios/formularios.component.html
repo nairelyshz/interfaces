@@ -9,19 +9,22 @@
 			<legend><span class="number">1</span>Datos básicos</legend>
 
 			<label for="name">Nombre:</label>
-			<input formControlName="name" type="text" id="name" name="user_name">
+			<input formControlName="name" type="text" id="name" name="user_name" [(ngModel)]="nuevoUsuario.nombre">
 
 			<label for="mail">Apellido:</label>
-			<input formControlName="last_name" type="email" id="mail" name="user_email">
+			<input formControlName="last_name" type="email" id="mail" name="user_email" [(ngModel)]="nuevoUsuario.correo">
 
 			<label for="nameUser">Nombre de usuario:</label>
-			<input formControlName="username" type="text" id="nameUser" name="user_nameUser">
+			<input formControlName="username" type="text" id="nameUser" name="user_nameUser" [(ngModel)]="nuevoUsuario.usuario">
 
-			<label for="password">CI:</label>
-			<input formControlName="ci" type="password" id="password" name="user_password">
+			<label for="password">Contraseña:</label>
+			<input formControlName="ci" type="password" id="password" name="user_password"[(ngModel)]="nuevoUsuario.passwd">
+
+		  <label for="ci">CI:</label>
+		  <input formControlName="ci" type="password" id="ci" name="identification"[(ngModel)]="nuevoUsuario.ci">
 
 			<label for="edad">Edad:</label>
-			<input tformControlName="edad" ype="text" id="edad" name="user_edad">
+			<input tformControlName="edad" ype="text" id="edad" name="user_edad" [(ngModel)]="nuevoUsuario.edad">
 
 			<label>Género:</label>
 
@@ -58,11 +61,12 @@
 
 			<label>Género:</label>
 
-			<input type="radio" id="under_13" value="under_13" name="user_age">
-			<label for="under_13" class="light">Masculino</label>
-			<input type="radio" id="over_13" value="over_13" name="user_age">
-			<label for="over_13" class="light">Femenino</label>
 
+
+			<label for="under_13" class="light">Masculino</label>
+				 <input type="radio" id="under_13" value="under_13" name="user_age">
+			<label for="over_13" class="light">Femenino</label>
+				 <input type="radio" id="over_13" value="over_13" name="user_age">
           <br>
         </fieldset>
         
@@ -70,9 +74,12 @@
         <div class="container-login100-form-btn">
             <div class="wrap-login100-form-btn">
               <div class="login100-form-bgbtn"></div>
-              <button type="submit" class="login100-form-btn">
+              <button type="submit" class="login100-form-btn" (click)="guardarUsurio()">
                 Registrarse
               </button>
+                <button class>
+
+                </button>
             </div>
           </div>
 

@@ -17,10 +17,13 @@ export class FormulariosComponent implements OnInit {
  * user = 3 medico
  * user = 4 investigador
  */
+
+  nuevoUsuario:any = {};
   user:number;
   userStr:string;
   registerForm : FormGroup;
-  constructor(private router : ActivatedRoute, private fb: FormBuilder,private _router : Router) { 
+  constructor(private router : ActivatedRoute, private fb: FormBuilder,private _router : Router) {
+
   	this.router.queryParams.subscribe(params =>{
   			console.log("cons "+params['typeUSer']);
   			this.user = params['typeUSer'];
@@ -60,6 +63,8 @@ export class FormulariosComponent implements OnInit {
 
   	});
   }
+
+
 
   submit() {
     
