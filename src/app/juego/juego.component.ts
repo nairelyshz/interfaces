@@ -65,7 +65,7 @@ export class JuegoComponent implements OnInit {
   }
 
     printJson(){
-      console.log(this.nuevoUsuario);
+  		console.log(this.nuevoUsuario);
     }
 
   submit() {
