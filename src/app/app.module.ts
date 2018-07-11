@@ -18,6 +18,8 @@ const routes: Routes = [
             {path: 'type_user', component: TypeUserComponent},
             {path: 'juegos', component: MenuJuegosComponent},
             {path: 'contacto', component: ContactoComponent},
+            {path: 'registrarse', component: FormulariosComponent},
+
             
             ];
 

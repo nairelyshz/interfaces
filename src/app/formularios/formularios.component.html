@@ -1,1 +1,78 @@
-<p>form</p>
+
+  
+	<div class="container-login100" style="background-image: url('assets/images/bg-01.jpg');">
+       <form action="">
+       		        <h1>Usuario: {{userStr}}</h1>
+        
+      <fieldset>
+
+			<legend><span class="number">1</span>Datos básicos</legend>
+
+			<label for="name">Nombre:</label>
+			<input type="text" id="name" name="user_name">
+
+			<label for="mail">Apellido:</label>
+			<input type="email" id="mail" name="user_email">
+
+			<label for="nameUser">Nombre de usuario:</label>
+			<input type="text" id="nameUser" name="user_nameUser">
+
+			<label for="password">CI:</label>
+			<input type="password" id="password" name="user_password">
+
+			<label for="edad">Edad:</label>
+			<input type="text" id="edad" name="user_edad">
+
+			<label for="genero">Genero:</label>
+			<select name="" id="">
+				<option value="F">Mujer</option>
+				<option value="M">Hombre</option>
+			</select>
+
+			
+          
+        </fieldset>
+	         <fieldset *ngIf="user==2">
+        	
+			<label>Cantidad de hijos:</label>
+			<input type="number" id="hijos" name="user_hijos">
+
+			<label for="name">Datos hijos:</label>
+
+			<label for="name">Nombre:</label>
+			<input type="text" id="name" name="user_name">
+
+			<label for="lastname">Apellido:</label>
+			<input type="text" id="lastname" name="user_lastname">
+
+			<label for="user_usuario">Nombre de usuario:</label>
+			<input type="text" id="usuario" name="user_usuario">
+
+			<label for="name">Cédula de Identidad o Nro de Pasaporte: (opcional)</label>
+			<input type="text" id="ci" name="user_ci">
+
+			<label>Edad:</label>
+			<input type="text" id="edad" name="user_edad">
+
+			<label>Género:</label>
+
+			<input type="radio" id="under_13" value="under_13" name="user_age">
+			<label for="under_13" class="light">Masculino</label>
+			<input type="radio" id="over_13" value="over_13" name="user_age">
+			<label for="over_13" class="light">Femenino</label>
+
+          <br>
+        </fieldset>
+        
+  
+        <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+              <div class="login100-form-bgbtn"></div>
+              <button type="submit" class="login100-form-btn">
+                Registrarse
+              </button>
+            </div>
+          </div>
+
+       </form>
+    </div>
