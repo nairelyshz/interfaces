@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {FormBuilder, Validators, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-formularios',
@@ -18,7 +20,7 @@ export class FormulariosComponent implements OnInit {
   user:number;
   userStr:string;
   registerForm : FormGroup;
-  constructor(private router : ActivatedRoute, private fb: FormBuilder) { 
+  constructor(private router : ActivatedRoute, private fb: FormBuilder,private _router : Router) { 
   	this.router.queryParams.subscribe(params =>{
   			console.log("cons "+params['typeUSer']);
   			this.user = params['typeUSer'];
@@ -57,6 +59,11 @@ export class FormulariosComponent implements OnInit {
   		kid_genero: [''],
 
   	});
+  }
+
+  submit() {
+    
+     this._router.navigate(['juegos']);
   }
 
 }
